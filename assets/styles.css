@@ -99,24 +99,41 @@ body{
   }
 
 
-  
   .container {
     display: flex;
+  
+
     
 }
 
 .sidebar {
-    width: 400px;
+    width: 300px;
     background-color:rgb(59,63,95);
     color: white;
     display: flex;
     flex-direction: column;
     padding: 20px;
     height: 100vh;
+    justify-content: flex-start; 
+    overflow-y: auto; 
+
+
+   
 }
+.sidebar hr {
+  width: 85%;
+  margin: 5px auto; 
+  border: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3); 
+}
+
 
 .nav-item {
     margin-bottom: 10px;
+    width: 100%;
+    /* border-bottom: 0.5px solid #a8a9b4 ; 
+    padding-bottom: 10px; */
 
 }
 
@@ -130,33 +147,87 @@ body{
     padding: 10px;
     cursor: pointer;
     font-weight: bold;
+    margin-left: 30px;
+    transition: all 0.3s ease-in-out;
+
+    
+
 
 
 }
-
 .nav-links {
     display: none;
     flex-direction: column;
-    gap: 5px;
-    padding-left: 15px;
+    /* gap: 5px; */
+    padding-left: 0;
     background-color:  #2f324c;
+
+
+
 }
 
 .nav-links a {
-    color: white;
+    color:#a8a9b4;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     padding: 5px;
     margin-bottom:10px;
     background-color: rgba(13, 8, 8, 0);
+
+
+    
 }
 
-.nav-links li:hover {
-    text-decoration: none;
-    color: #126ac3;
-    cursor: pointer;
+.nav-links li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+  position: relative;
+
+
+
+}
+.nav-links li::before{
+    content: " ";
+    width: 8px;
+    height: 8px;
+    border: 2px solid gray; 
+    border-radius: 50%;
+    position: relative;
+    background: transparent;
+    left: 0;
+    flex-shrink: 0;
+}
+.nav-links li:hover::before {
+  background:  #0ba5cc; 
+  border-color: #0ba5cc;
+  transition: all 0.3s ease-in-out;
+}
+.nav-links a {
+  color:#a8a9b4;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  transition: color 0.3s;
+  transition: all 0.3s ease-in-out;
+
 }
 
+.nav-links li:hover a {
+  color: white; 
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item button.active {
+    background-color: #2f324c;
+    margin-left: 0; 
+    padding-left: 10px 15px; 
+    width: 100%;
+    text-align: left;
+    transition: all 0.3s ease-out;
+  }
 .appointment {
    margin-top: 20px;
     padding: 15px;
@@ -167,16 +238,17 @@ body{
     font-weight: bold;
     cursor: pointer;
 }
-
 .appointment:hover {
     background-color: #c0392b;
 }
 hr {
     border: none; 
-    height: 0.1px;
-    background-color: black;
+    height: 1px;
+    background-color: white;
   }
   li{
     margin-bottom:10px;
     background-color: rgba(13, 8, 8, 0);
+
+
   }
