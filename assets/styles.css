@@ -117,9 +117,6 @@
 
 
 
-.container {
-    display: flex;    
-
  .container {
   display: flex;
 
@@ -142,23 +139,7 @@
   filter: blur(0.1rem); 
   transition: filter 0.1s ease-in-out; 
 }
-.sidebar hr {
-  width: 85%;
-  margin: 5px auto; 
-  border: none;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.3); 
 
-  width: 300px;
-  background-color: rgb(59,63,95);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 0;
-  height: 100vh;
-  
-
-}
 
 .nav-item{
   padding-bottom: 0.9rem;
@@ -312,12 +293,8 @@ h3 {
 }
 
 hr {
-
   height: 0.09px;
   background-color: #a8a9b4;
-
-  
-
 }
 
 .footer {
