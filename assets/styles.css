@@ -13,6 +13,10 @@ body{
     align-items: flex-end; 
     padding: 20px;
   }
+  .blur-header {
+    filter: blur(0.1rem); 
+    transition: filter 0.1s ease-in-out; /* Smooth transition for the blur effect */
+}
     .header::before {
         content: '';
         position: absolute;
@@ -107,9 +111,9 @@ body{
 
 
 .container {
-    display: flex;
-      
+    display: flex;    
 }
+
 
 .sidebar {
     width: 300px;
@@ -120,10 +124,11 @@ body{
     padding: 20px;
     height: 100vh;
     justify-content: flex-start; 
-    overflow-y: auto; 
-
-
-   
+    overflow-y: auto;  
+}
+.blur-sidebar {
+  filter: blur(0.1rem); 
+  transition: filter 0.1s ease-in-out; 
 }
 .sidebar hr {
   width: 85%;
@@ -232,6 +237,7 @@ body{
     text-align: left;
     transition: all 0.3s ease-out;
   }
+
 .appointment {
    margin-top: 20px;
     padding: 15px;
@@ -241,6 +247,55 @@ body{
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
+}
+.form-container{
+  position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 300px; /* Smaller form size */
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    z-index: 1000; /* Ensure it appears above everything else */
+    display: none; /* Hidden by default */
+}
+.form-container label {
+    
+    font-weight: bold;
+    color: black;
+}
+
+.form-container input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px; /* Rounded input fields */
+  border: 1px solid #ccc; /* Light border */
+}
+
+.form-container button {
+  width: calc(50% - 5px);
+  padding: 10px;
+  border-radius: 5px; /* Rounded buttons */
+}
+
+.form-container button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+}
+
+.form-container button[type="button"] {
+    background-color: #e74c3c;
+    color: white;
+}
+h3 {
+  color: black ;
+}
+
+.form-container.active {
+    right: 0; 
 }
 .appointment:hover {
     background-color: #c0392b;
@@ -261,6 +316,10 @@ hr {
     color: white;
     padding: 20px;
     width: 100%;
+}
+.blur-footer {
+  filter: blur(0.1rem); 
+  transition: filter 0.1s ease-in-out; 
 }
 
 .footer-content {
