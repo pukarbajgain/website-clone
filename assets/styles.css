@@ -116,10 +116,6 @@
 }
 
 
-
-.container {
-    display: flex;    
-
  .container {
   display: flex;
 
@@ -260,13 +256,13 @@
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
-    width: 300px; /* Smaller form size */
+    width: 300px;
     background-color: white;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px; 
     padding: 20px;
-    z-index: 1000; /* Ensure it appears above everything else */
-    display: none; /* Hidden by default */
+    z-index: 1000; 
+    display: none; 
 }
 .form-container label {
     
@@ -278,14 +274,14 @@
   width: calc(100% - 20px);
   padding: 10px;
   margin-bottom: 15px;
-  border-radius: 5px; /* Rounded input fields */
-  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; 
+  border: 1px solid #ccc; 
 }
 
 .form-container button {
   width: calc(50% - 5px);
   padding: 10px;
-  border-radius: 5px; /* Rounded buttons */
+  border-radius: 5px; 
 }
 
 .form-container button[type="submit"] {
@@ -362,5 +358,3 @@ hr {
 
 
 
- 
- 
