@@ -1,156 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Consulate of Armenia to Nepal</title>
-  <link rel="stylesheet" href="./assets/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-  <header class="header">
-    <div class="header-content">
-        <div class = "left-section">
-      <img src="./assets/img/real_armenai.png" alt="Embassy Logo" class="logo">
-      <h1>Consulate of Armenia to Nepal</h1>
-      </div>
-      <div class = "right-section">
-        <div class="language-switch">
-        <a href="#" class="lang">English</a>
-        <a href="#" class="lang">Nepali</a>
-      </div>
-      <div class="social-icons">
-        <a href="#" class="icon facebook">
-            <i class="fa fa-facebook"></i>
-        </a>
-        <a href="#" class="icon twitter">
-            <i class="fa fa-twitter"></i>
-        </a>
-    </div>
-      </div>
-     </div>
-  </header>
-  <div class="container">
-    <nav class="sidebar">
-        <div class="nav-item">
-            <button onclick="toggleMenu('menu1',this)">Embassy</button>
-            <div class="nav-links" id="menu1">
-                <li><a href="#">Ambassador</a></li>
-                <li><a href="#">Structure</a></li>
-                <li><a href="#">Contacts/Working Hours</a></li>
-                <li><a href="#">Photo Gallery</a></li>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Consulate of Armenia to Nepal</title>
+        <link rel="stylesheet" href="./assets/styles.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <!-- fb sdk -->
+        <script async defer crossorigin="anonymous"
+            src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0"></script>
+
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header-content">
+                <div class="left-section">
+                    <img src="./assets/img/real_armenai.png" alt="Embassy Logo" class="logo">
+                    <h1>Consulate of Armenia to Nepal</h1>
+                </div>
+                <div class="right-section">
+                    <div class="language-switch">
+                        <a href="#" class="lang">English</a>
+                        <a href="#" class="lang">Nepali</a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#" class="icon facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="icon twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <hr>
-        
-        <div class="nav-item">
-            <button onclick="toggleMenu('menu2',this)">Armenia</button>
-            <div class="nav-links" id="menu2">
-                <li><a href="#">Overview</a></li> 
-                <li><a href="#">Governance</a></li>
-                <li><a href="#">Culture</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Doing business in Armenia</a></li>
+        </header>
+
+
+
+        <div class="container">
+
+
+            <nav class="sidebar">
+                <div class="nav-item">
+                    <button onclick="toggleMenu('menu1',this)">Embassy</button>
+                    <div class="nav-links" id="menu1">
+                        <ul>
+                        <li><a href="#">Ambassador</a></li>
+                        <li><a href="#">Structure</a></li>
+                        <li><a href="#">Contacts/Working Hours</a></li>
+                        <li><a href="#">Photo Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="nav-item">
+                    <button onclick="toggleMenu('menu2',this)">Armenia</button>
+                    <div class="nav-links" id="menu2">
+                        <ul>
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Governance</a></li>
+                        <li><a href="#">Culture</a></li>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Doing business in Armenia</a></li>
+                    </ul> 
+                    </div>
+                </div>
+                <hr>
+                <div class="nav-item">
+                    <button onclick="toggleMenu('menu3',this)">VISA for citizens of Nepal</button>
+                    <div class="nav-links" id="menu3">
+                        <ul>
+                        <li> <a href="#">Requirements</a></li>
+                        <li><a href="#">Application</a></li>
+                        <li><a href="#">Processing Time</a></li>
+                    </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="nav-item">
+                    <button onclick="toggleMenu('menu4',this)">Bilateral Relations</button>
+                    <div class="nav-links" id="menu4">
+                        <ul>
+                        <li><a href="#">Trade</a></li>
+                        <li> <a href="#">Politics</a></li>
+                        <li><a href="#">Agreements</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="nav-item">
+                    <button onclick="toggleMenu('menu5',this)">Consular Affairs</button>
+                    <div class="nav-links" id="menu5">
+                        <ul>
+                        <li><a href="#">Free Consular Services</a></li>
+                        <li><a href="#">Visa</a></li>
+                        <li><a href="#">Passport</a></li>
+                        <li><a href="#">Consular registration</a></li>
+                        <li><a href="#">Notary services</a></li>
+                        <li><a href="#">Special residency Status</a></li>
+                        <li><a href="#">Advice for travellers</a></li>
+                        <li><a href="#">Crimial record certificate</a></li>
+                        <li><a href="#">Consular fees</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+
+
+                    </div>
+                </div>
+                <hr>
+                <div class="nav-item">
+                    <button onclick="toggleMenu('menu6',this)">News and Information</button>
+                    <div class="nav-links" id="menu6">
+                        <ul>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Useful Links</a></li>
+                        <li><a href="#">Announcements</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="nav-item">
+                    <button onclick="toggleMenu('menu7',this)">Armenian Community</button>
+                    <div class="nav-links" id="menu7">
+                        <ul>
+                        <li><a href="#">About Community</a></li>
+                        <li><a href="#">Activities</a></li>
+                        <li><a href="#">Hayastan All Armenian Fund</a></li>
+                    </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="nav-item">
+                    <button onclick="toggleMenu('menu8',this)">Study in Armenia</button>
+                    <div class="nav-links" id="menu8">
+                    <ul>
+                        <li><a href="#">Universities</a></li>
+                        <li><a href="#">Scholarships</a></li>
+                        <li><a href="#">Programs</a></li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="appointment" onclick="toggleForm()">BOOK AN APPOINTMENT</div>
+            </nav>
+            <div id="appointmentForm" class="form-container">
+                <form id="form_element" onsubmit="return validateForm(event)">
+                    <h3> Book an appointment </h3>
+                    <label for="name"> Name:</label>
+                    <input type="text" id="name" placeholder="Must be filled" required>
+                    <label for="email"> Email:</label>
+                    <input type="email" id="email" placeholder="Must be filled" required>
+                    <label for="phone"> Phone:</label>
+                    <input type="tel" id="phone" placeholder="Must be filled" required>
+                    <label for="date">Preferred Date:</label>
+                    <input type="date" id="date" required>
+                    <button type="submit">Submit</button>
+                    <button type="button" onclick="toggleForm()">Cancel</button>
+                </form>
+            </div>
+
+            <div class="body-container">
+                <section class="news-feed">
+                    <h2>News</h2>
+                    <hr>
+                    <div class="news-grid">
+                        <div class="news-item">
+                            <img src="./assets/img/news1.jpeg" alt="News Image">
+                            <div class="news-content">
+                                <p class="date">18.01.2025</p>
+                                <p class="news-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                    Recusandae consectetur reprehenderit facere rerum aliquid earum cum quis blanditiis
+                                    quidem itaque?</p>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="news-item">
+                            <img src="./assets/img/news2.jpeg" alt="News Image">
+                            <div class="news-content">
+                                <p class="date">06.01.2025</p>
+                                <p class="news-title">mass Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                                    reiciendis natus delectus numquam rem, quasi distinctio? Iusto perferendis enim id!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="news-item">
+                            <img src="./assets/img/news3.jpeg" alt="News Image">
+                            <div class="news-content">
+                                <p class="date">06.01.2025</p>
+                                <p class="news-title"> mass Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    Aperiam libero veritatis temporibus quis ducimus consequuntur itaque iusto labore
+                                    quae minus!</p>
+                            </div>
+                        </div>
+
+                        <div class="news-item">
+                            <img src="./assets/img/news4.jpeg" alt="News Image">
+                            <div class="news-content">
+                                <p class="date">06.01.2025</p>
+                                <p class="news-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+                                    sapiente rerum laudantium obcaecati possimus harum vel veniam, aperiam doloremque
+                                    rem.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </section>
+
+
+                <div class="middle-section">
+                    <section class="mfa-news">
+                        <h2>MFA News </h2>
+                        <hr>
+                        <div class="mfa-item">
+                            <p class="date">31.03.2025</p>
+                            <p class="mfa-title">Meeting of the Minister of Foreign Affairs...</p>
+                        </div>
+                        <hr>
+                        <div class="mfa-item">
+                            <p class="date">28.03.2025</p>
+                            <p class="mfa-title">Political Consultations between Armenia & Switzerland</p>
+                        </div>
+                        <hr>
+                        <div class="mfa-item">
+                            <p class="date">28.03.2025</p>
+                            <p class="mfa-title">Political Consultations between Armenia & Switzerland</p>
+                        </div>
+                        <hr>
+                        <div class="mfa-item">
+                            <p class="date">28.03.2025</p>
+                            <p class="mfa-title">Political Consultations between Armenia & Switzerland</p>
+                        </div>
+
+
+                    </section>
+
+
+                    <div class="social-media">
+                        <div class="fb-page" data-href="https://www.facebook.com/MFA.Armenia" data-tabs="timeline">
+                        </div>
+                    </div>
+
+                    <div class="bottom-block">
+                        <button class="info-btn">MFA Official Website</button>
+                        <button class="info-btn">Electronic Visa</button>
+                        <button class="info-btn">Dual Citizenship</button>
+                        <button class="info-btn">Visa Applications</button>
+                    </div>
+                </div>
 
             </div>
-        </div>
-        <hr>
-        <div class="nav-item">
-            <button onclick="toggleMenu('menu3',this)">VISA for citizens of Nepal</button>
-            <div class="nav-links" id="menu3">
-               <li> <a href="#">Requirements</a></li>
-                <li><a href="#">Application</a></li>
-                <li><a href="#">Processing Time</a></li>
-                
-            </div>
-        </div>
-        <hr>
-        <div class="nav-item">
-            <button onclick="toggleMenu('menu4',this)">Bilateral Relations</button>
-            <div class="nav-links" id="menu4">
-                <li><a href="#">Trade</a></li>
-                <li> <a href="#">Politics</a></li>
-                <li><a href="#">Agreements</a></li>
-            </div>
-        </div>
-        <hr>
-        <div class="nav-item">
-            <button onclick="toggleMenu('menu5',this)">Consular Affairs</button>
-            <div class="nav-links" id="menu5">
-                <li><a href="#">Free Consular Services</a></li>
-                <li><a href="#">Visa</a></li>
-                <li><a href="#">Passport</a></li>
-                <li><a href="#">Consular registration</a></li>
-                <li><a href="#">Notary services</a></li>
-                <li><a href="#">Special residency Status</a></li>
-                <li><a href="#">Advice for travellers</a></li>
-                <li><a href="#">Crimial record certificate</a></li>
-                <li><a href="#">Consular fees</a></li>
-                <li><a href="#">FAQ</a></li>
-                
-                
-            </div>
-        </div>
-        <hr>
-        <div class="nav-item">
-            <button onclick="toggleMenu('menu6',this)">News and Information</button>
-            <div class="nav-links" id="menu6">
-                <li><a href="#">News</a></li>
-                <li><a href="#">Useful Links</a></li>
-                <li><a href="#">Announcements</a></li>
-            </div>
-        </div>
-        <hr>
-        <div class="nav-item">
-            <button onclick="toggleMenu('menu7',this)">Armenian Community</button>
-            <div class="nav-links" id="menu7">
-                <li><a href="#">About Community</a></li>
-                <li><a href="#">Activities</a></li>
-                <li><a href="#">Hayastan All Armenian Fund</a></li>
-            </div>
-        </div>
-        <hr>
-        <div class="nav-item">
-            <button onclick="toggleMenu('menu8',this)">Study in Armenia</button>
-            <div class="nav-links" id="menu8" >
-                <li><a href="#">Universities</a></li>
-                <li><a href="#">Scholarships</a></li>
-                <li><a href="#">Programs</a></li>
-            </div>
-        </div>
-        <div class="appointment" onclick="toggleForm()">BOOK AN APPOINTMENT</div>
-    </nav>
-    <div id="appointmentForm" class="form-container">
-        <form id = "form_element" onsubmit="return validateForm(event)">
-            <h3> Book an appointment </h3>
-            <label for="name"> Name:</label>
-            <input type="text" id="name" placeholder="Must be filled" required>
-            <label for="email"> Email:</label>
-            <input type="email" id="email" placeholder="Must be filled" required>
-            <label for="phone"> Phone:</label>
-            <input type="tel" id="phone" placeholder="Must be filled" required>
-            <label for="date">Preferred Date:</label>
-            <input type="date" id="date" required>
-            <button type="submit">Submit</button>
-            <button type="button" onclick="toggleForm()">Cancel</button>
-        </form>
-    </div>
-</div>
- <div class = "footer">
-    <div class = "footer-content">
-    <div class = "footer-left">
-        <img src="./assets/img/real_armenai.png" alt="Coat of Arms" class="coat-of-arms">
-        <p>Consulate of Armenia to Nepal <br>
-           Copyright 2025, All Rights Reserved</p>
-    </div>
-    <div class="footer-right">
-        <p>Armenia Street, D-133, Anand Niketan, <br>
-            New Delhi-110021, India</p>
-    </div>
-   </div>
- </div>
-</footer>
-<script src="./assets/app.js"></script>
-</body>
+            
+       </div>     
+
+            <script src="./assets/app.js"></script>
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <img src="./assets/img/real_armenai.png" alt="Coat of Arms" class="coat-of-arms">
+                        <p>Consulate of Armenia to Nepal <br>
+                            Copyright 2025, All Rights Reserved</p>
+                    </div>
+                    <div class="footer-right">
+                        <p>Armenia Street, D-133, Anand Niketan, <br>
+                            New Delhi-110021, India</p>
+                    </div>
+                </div>
+            </footer>
+
+    </body>
+
 </html>
