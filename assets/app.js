@@ -25,13 +25,22 @@ function toggleMenu(id, button) {
 
 function toggleForm() {
     const form = document.getElementById('appointmentForm');
+
+    const overlay = document.getElementById('overlay');
+    const header = document.querySelector('.header'); 
+    const navbar = document.querySelector('.sidebar'); 
     const header = document.querySelector('.header');
     const navbar = document.querySelector('.sidebar');
     const footer = document.querySelector('.footer');
 
 
     if (form.style.display === 'none' || form.style.display === '') {
+
+        form.style.display = 'block'; 
+        overlay.style.display = 'block';
+
         form.style.display = 'block';
+
 
 
         header.classList.add('blur-header');
@@ -39,7 +48,12 @@ function toggleForm() {
         footer.classList.add('blur-footer');
         document.body.style.overflow = 'hidden';
     } else {
+
+        form.style.display = 'none'; 
+        overlay.style.display = 'none';
+
         form.style.display = 'none';
+
         header.classList.remove('blur-header');
         navbar.classList.remove('blur-sidebar');
         footer.classList.remove('blur-footer');
