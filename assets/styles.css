@@ -21,7 +21,7 @@
   }
   .blur-header {
     filter: blur(0.1rem); 
-    transition: filter 0.1s ease-in-out; /* Smooth transition for the blur effect */
+    transition: filter 0.1s ease-in-out;
 }
     .header::before {
         content: '';
@@ -129,7 +129,6 @@
     color: white;
     display: flex;
     flex-direction: column;
-    padding: 20px;
     height: 100vh;
     justify-content: flex-start; 
     overflow-y: auto;  
@@ -138,28 +137,10 @@
   filter: blur(0.1rem); 
   transition: filter 0.1s ease-in-out; 
 }
-.sidebar hr {
-  width: 85%;
-  margin: 5px auto; 
-  border: none;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.3); 
-
-  width: 300px;
-  background-color: rgb(59,63,95);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 0;
-  height: 100vh;
-  
-
-}
 
 .nav-item{
   padding-bottom: 0.9rem;
   
-
 }
 
 .nav-item button {
@@ -251,37 +232,54 @@
   cursor: pointer;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 999; /* Ensure it appears above all other elements */
+  display: none; /* Hidden by default */
+}
 .form-container{
   position: fixed;
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
-    width: 300px;
+    width: 500px;
     background-color: white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 10px; 
-    padding: 20px;
+    padding: 30px;
     z-index: 1000; 
     display: none; 
 }
 .form-container label {
     
-    font-weight: bold;
-    color: black;
+  font-weight: bold;
+  color: #555555;
+  display: block;
+  padding-bottom: 1rem;
 }
 
-.form-container input {
-  width: calc(100% - 20px);
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 5px; 
-  border: 1px solid #ccc; 
+.form-container input,
+.form-container textarea {
+  width: calc(100% - 20px); 
+    padding: 12px; 
+    margin-bottom: 20px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+}
+.form-container textarea {
+  resize: none; 
 }
 
 .form-container button {
-  width: calc(50% - 5px);
-  padding: 10px;
-  border-radius: 5px; 
+  width: calc(50% - 10px); 
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 16px; 
 }
 
 .form-container button[type="submit"] {
@@ -293,8 +291,18 @@
     background-color: #e74c3c;
     color: white;
 }
+.form-container button:hover[type="submit"] {
+    background-color: #2980b9;
+    transition: background-color 0.3s ease;
+}
+.form-container button:hover[type="button"] {
+    background-color: #c0392b;
+    transition: background-color 0.3s ease;
+}
 h3 {
-  color: black ;
+  text-align: center;
+    color: #333333; 
+    margin-bottom: 20px;
 }
 
 .form-container.active {
