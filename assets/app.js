@@ -17,18 +17,18 @@ function toggleMenu(id, button) {
         button.classList.remove('active');
     } else {
         menu.style.display = 'flex';
+        if(menu.querySelector('a'))
         button.classList.add('active');
+        sessionStorage.setItem('active-nav-btn', button.dataset.id)
     }
 }
 
 
 
+
 function toggleForm() {
     const form = document.getElementById('appointmentForm');
-
     const overlay = document.getElementById('overlay');
-    const header = document.querySelector('.header'); 
-    const navbar = document.querySelector('.sidebar'); 
     const header = document.querySelector('.header');
     const navbar = document.querySelector('.sidebar');
     const footer = document.querySelector('.footer');
@@ -36,20 +36,17 @@ function toggleForm() {
 
     if (form.style.display === 'none' || form.style.display === '') {
 
-        form.style.display = 'block'; 
-        overlay.style.display = 'block';
-
         form.style.display = 'block';
-
-
-
+        overlay.style.display = 'block';
+        form.style.display = 'block';
         header.classList.add('blur-header');
         navbar.classList.add('blur-sidebar');
         footer.classList.add('blur-footer');
         document.body.style.overflow = 'hidden';
+
     } else {
 
-        form.style.display = 'none'; 
+        form.style.display = 'none';
         overlay.style.display = 'none';
 
         form.style.display = 'none';
