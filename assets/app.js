@@ -17,7 +17,7 @@ function toggleMenu(id, button) {
         button.classList.remove('active');
     } else {
         menu.style.display = 'flex';
-        if(menu.querySelector('a'))
+        // if(menu.querySelector('a'))
         button.classList.add('active');
         sessionStorage.setItem('active-nav-btn', button.dataset.id)
     }
