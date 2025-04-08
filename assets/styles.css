@@ -1,21 +1,16 @@
-
-
-
- * {
+* {
   box-sizing: border-box;
   margin: 0;
   border: 0;
-
 }
 
 body {
-
-  font-family: Georgia, 'Times New Roman', Times, serif
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .header {
   position: relative;
-  background-image: url('./img/banner.jpeg');
+  background-image: url("./img/banner.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,7 +26,7 @@ body {
 }
 
 .header::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -71,12 +66,9 @@ body {
   background: none;
   width: 105px;
   height: auto;
-
-
 }
 
 h1 {
-
   color: white;
   font-size: 30px;
 }
@@ -101,10 +93,7 @@ h1 {
   bottom: 25px;
   right: 30px;
   position: absolute;
-
 }
-
-
 
 .icon {
   display: flex;
@@ -113,31 +102,27 @@ h1 {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #3B3F5F;
+  background-color: #3b3f5f;
   color: white;
   font-size: 24px;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
 
-
 .icon:hover {
   transform: scale(1.1);
 }
 
-
-
 .container {
-  display: flex;
-  flex: 1;  
-  
-
+  display: grid;
+  grid-template-columns: 20% 80%;
+  height: 100vh; /* optional: full screen height */
+  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
 }
 
-
 .sidebar {
-
-  width: 300px;
+ 
+  width: 18.75rem;
   background-color: rgb(59, 63, 95);
   color: white;
   display: flex;
@@ -152,11 +137,8 @@ h1 {
   transition: filter 0.1s ease-in-out;
 }
 
-
 .nav-item {
   padding-bottom: 0.9rem;
-
-
 }
 
 .nav-item button {
@@ -168,17 +150,14 @@ h1 {
   padding: 10px;
   cursor: pointer;
   font-weight: bold;
-
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .nav-links {
-
   display: none;
   flex-direction: column;
   background-color: #2f324c;
   overflow: hidden;
-
-
 }
 
 .nav-links li {
@@ -186,9 +165,6 @@ h1 {
   color: #a8a9b4;
   padding: 1rem;
   transition: none;
-
-
-
 }
 
 .nav-links li {
@@ -198,9 +174,6 @@ h1 {
   color: #a8a9b4;
   text-decoration: none;
   cursor: pointer;
-
-
-
 }
 .nav-links li.active-link {
   color: white;
@@ -212,7 +185,6 @@ h1 {
   font-size: 1rem;
 }
 
-
 .nav-links li::marker {
   font-size: 1rem;
   content: "○";
@@ -222,20 +194,16 @@ h1 {
   content: "•";
   color: #0ba5cc;
   font-size: 1rem;
-
-
 }
 
 .nav-links li:hover {
   color: white;
-
 }
 
 .nav-links li:hover a {
   color: white;
   position: absolute;
 }
-
 
 /* .nav-item button.active {
   background-color: #2f324c;
@@ -245,8 +213,6 @@ h1 {
   text-align: left;
   transition: all 0.3s ease-out;
 } */
-
-
 
 .appointment {
   padding: 1rem 0;
@@ -276,7 +242,6 @@ h1 {
 }
 
 .form-container label {
-
   font-weight: bold;
   color: black;
 }
@@ -316,8 +281,6 @@ h3 {
   right: 0;
 }
 
-
-
 .appointment:hover {
   background-color: #c0392b;
 }
@@ -327,23 +290,14 @@ hr {
   background-color: #a8a9b4;
 }
 
-
-
-
-
-
 /* General Layout */
 .body-container {
- 
   width: 100%;
   display: flex;
   flex: 1;
   flex-direction: column;
   gap: 20px;
-  background: #f9f9f9;
-
-
-
+  padding : 2.813rem 0rem 2.813rem 2.813rem;
 }
 
 /* Top Block: News Feed */
@@ -462,26 +416,12 @@ hr {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
 .footer {
-  background-color: #282C47;
+  background-color: #282c47;
   color: white;
   padding: 20px;
   width: 100%;
   text-align: center;
-  
-
-
-
 }
 
 .blur-footer {
@@ -518,5 +458,133 @@ hr {
   text-align: left;
   margin-right: 80px;
   font-size: 15px;
+}
 
+.ambassador-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 1.5rem; */
+  row-gap: 2rem;
+}
+
+.ambassador-heading {
+  align-self: flex-start;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+.ambassador-content {
+  text-align: center;
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  padding-left: 100rem 0rem;
+}
+
+.ambassador-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.ambassador-designation {
+  font-size: 1rem;
+  color: #444;
+}
+
+.ambassador-img {
+  width: 22rem;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.ambassador-body {
+  align-self: flex-start;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  padding: 1rem;
+}
+.dob {
+  font-weight: bold;
+  line-height: 3rem;
+}
+.experience {
+  font-weight: bold;
+  line-height: 3rem;
+}
+
+.education {
+  font-weight: bold;
+  line-height: 3rem;
+}
+
+.structure-section {
+  display: flex;
+  flex-direction: column;
+  /* padding: 1.5rem; */
+  /* row-gap: 1rem;  */
+}
+.structure-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+.counsellor {
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+}
+.second {
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+}
+
+.assistant {
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+}
+.consul {
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+}
+
+.structure-body {
+  font-size: 1rem;
+  color: #555;
+  padding-top: 2rem;
+}
+
+.consul-content {
+  padding-bottom: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+}
+
+.counsellor-content {
+  padding-bottom: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+}
+
+.second-content {
+  padding-bottom: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+}
+
+
+.working-hours-section p {
+  padding-bottom: 1rem;
+}
+
+.working-hours-heading{
+  padding-bottom: 2rem;
 }
