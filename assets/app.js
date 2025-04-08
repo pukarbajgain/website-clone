@@ -10,13 +10,15 @@ function toggleMenu(id, button) {
     if (btn !== button) btn.classList.remove("active");
   });
 
-  if (menu.style.display === "flex") {
-    menu.style.display = "none";
-    button.classList.remove("active");
-  } else {
-    menu.style.display = "flex";
-    button.classList.add("active");
-  }
+
+    if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+        button.classList.remove('active');
+    } else {
+        menu.style.display = 'flex';
+        button.classList.add('active');
+        sessionStorage.setItem('active-nav-btn', button.dataset.id)
+    }
 }
 
 function toggleForm() {

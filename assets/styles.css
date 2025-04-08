@@ -68,9 +68,12 @@ body {
   height: auto;
 }
 
-h1 {
+h1 a{
+
   color: white;
   font-size: 30px;
+  text-decoration: none;
+
 }
 
 .language-switch {
@@ -127,7 +130,8 @@ h1 {
   color: white;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height:100rem;
+  /* vertical-align:baseline; */
   justify-content: flex-start;
   overflow-y: auto;
 }
@@ -153,7 +157,8 @@ h1 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.nav-links {
+.nav-links{
+
   display: none;
   flex-direction: column;
   background-color: #2f324c;
@@ -205,14 +210,13 @@ h1 {
   position: absolute;
 }
 
-/* .nav-item button.active {
+.nav-item button.active {
   background-color: #2f324c;
-  margin-left: 0;
-  padding-left: 10px 15px;
+  padding: 10px 15px;
   width: 100%;
   text-align: left;
   transition: all 0.3s ease-out;
-} */
+}
 
 .appointment {
   padding: 1rem 0;
@@ -297,10 +301,16 @@ hr {
   flex: 1;
   flex-direction: column;
   gap: 20px;
-  padding : 2.813rem 0rem 2.813rem 2.813rem;
-}
+  /* background: #f9f9f9; */
+  background: white;
+  padding: 2.813rem 2.813rem 2.813rem 2.813rem;
 
-/* Top Block: News Feed */
+
+}
+.culture-1{
+  padding: 0.313rem; 
+  margin-right:0.414rem;
+}
 .news-feed {
   background: white;
   padding: 15px;
