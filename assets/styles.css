@@ -596,5 +596,51 @@ hr {
 }
 
 .working-hours-heading{
+  padding-bottom: 1rem;
+}
+
+.gallery-heading{
   padding-bottom: 2rem;
+}
+
+ .photo-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; 
+
+}
+ .pic-box {
+  width: 30%;
+ 
+}   
+.pic-box img{
+  width: 18rem; 
+}
+.photo-title {
+ padding-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.date{
+  padding-top: 1rem;
+  font-style: italic;
+}
+
+
+.consular p {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.service-list {
+  padding-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.passport-body p {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+
 }
