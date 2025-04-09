@@ -1,3 +1,10 @@
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,7 +12,7 @@
 }
 
 body {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .header {
@@ -117,10 +124,11 @@ h1 a{
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 20% 80%;
-  height: 100vh; /* optional: full screen height */
-  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+  display: flex;
+  /* grid-template-columns: 20% 80%; */
+  /* height: 100vh;  */
+  flex:1;
+  flex-direction: row;
 }
 
 .sidebar {
@@ -431,7 +439,7 @@ hr {
   color: white;
   padding: 20px;
   width: 100%;
-  text-align: center;
+  text-align:center;
 }
 
 .blur-footer {
@@ -536,8 +544,7 @@ hr {
 .structure-section {
   display: flex;
   flex-direction: column;
-  /* padding: 1.5rem; */
-  /* row-gap: 1rem;  */
+
 }
 .structure-heading {
   font-size: 1.5rem;
@@ -546,23 +553,19 @@ hr {
 }
 .counsellor {
   font-weight: bold;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-style: italic;
 }
 .second {
   font-weight: bold;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-style: italic;
 }
 
 .assistant {
   font-weight: bold;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-style: italic;
 }
 .consul {
   font-weight: bold;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-style: italic;
 }
 
@@ -574,19 +577,16 @@ hr {
 
 .consul-content {
   padding-bottom: 2rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-style: italic;
 }
 
 .counsellor-content {
   padding-bottom: 2rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-style: italic;
 }
 
 .second-content {
   padding-bottom: 2rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-style: italic;
 }
 
@@ -598,3 +598,9 @@ hr {
 .working-hours-heading{
   padding-bottom: 2rem;
 }
+
+.pdf a{
+  text-decoration: none;
+
+}
+
