@@ -21,6 +21,8 @@ function toggleMenu(id, button) {
     }
 }
 
+
+
 function toggleForm() {
   const form = document.getElementById("appointmentForm");
   const header = document.querySelector(".header");
