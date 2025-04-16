@@ -14,14 +14,13 @@ function toggleMenu(id, button) {
     if (menu.style.display === 'flex') {
         menu.style.display = 'none';
         button.classList.remove('active');
+        sessionStorage.removeItem('active-nav-btn');
     } else {
         menu.style.display = 'flex';
         button.classList.add('active');
         sessionStorage.setItem('active-nav-btn', button.dataset.id)
     }
 }
-
-
 
 function toggleForm() {
   const form = document.getElementById("appointmentForm");
@@ -35,7 +34,7 @@ function toggleForm() {
     header.classList.add("blur-header");
     navbar.classList.add("blur-sidebar");
     footer.classList.add("blur-footer");
-    document.body.style.overflow = "hidde n";
+    document.body.style.overflow = "hidden";
   } else {
     form.style.display = "none";
     header.classList.remove("blur-header");
@@ -73,3 +72,7 @@ function validateForm(event) {
   alert("Form submitted successfully!");
   return true;
 }
+
+
+
+
