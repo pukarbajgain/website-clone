@@ -14,14 +14,13 @@ function toggleMenu(id, button) {
     if (menu.style.display === 'flex') {
         menu.style.display = 'none';
         button.classList.remove('active');
+        sessionStorage.removeItem('active-nav-btn');
     } else {
         menu.style.display = 'flex';
         button.classList.add('active');
         sessionStorage.setItem('active-nav-btn', button.dataset.id)
     }
 }
-
-
 
 function toggleForm() {
   const form = document.getElementById("appointmentForm");
@@ -91,3 +90,7 @@ function validateForm(event) {
   alert("Form submitted successfully!");
   return true;
 }
+
+
+
+
