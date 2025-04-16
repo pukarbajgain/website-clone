@@ -110,17 +110,16 @@
         <form id="form_element" onsubmit="return validateForm(event)">
             <h3> Book an appointment </h3>
             <label for="name"> Name:</label>
-            <input type="text" id="name" placeholder="Must be filled" style="font-family: 'Times New Roman', Times, serif;" required>
+            <input type="text" id="name" placeholder="Must be filled" required>
             <label for="email"> Email:</label>
-            <input type="email" id="email" placeholder="Must be filled" style="font-family: 'Times New Roman', Times, serif;" required>
+            <input type="email" id="email" placeholder="Must be filled" required>
             <label for="phone"> Phone:</label>
-            <input type="tel" id="phone" placeholder="Must be filled" style="font-family: 'Times New Roman', Times, serif;" required>
+            <input type="tel" id="phone" placeholder="Must be filled"  required>
             <label for="date">Preferred Date:</label>
-            <input type="date" id="date" style="font-family: 'Times New Roman', Times, serif;" required>
+            <input type="date" id="date" required>
             <label for="message">Your Message:</label>
-            <textarea id="message" rows="10" placeholder="Write your message here..." style="font-family: 'Times New Roman', Times, serif;"></textarea>
-
-            <button type="submit" onclick="toggleForm()" style="font-family: 'Times New Roman', Times, serif;">Submit</button>
-            <button type="button" onclick="toggleForm()" style="font-family: 'Times New Roman', Times, serif;">Cancel</button>
+            <textarea id="message" rows="10" placeholder="Write your message here..." required></textarea>
+            <button type="submit" onclick="toggleForm()">Submit</button>
+            <button type="button" onclick="toggleForm()">Cancel</button>
         </form>
     </div>

@@ -382,6 +382,7 @@ h1 a {
   border-radius: 12px;
   padding: 2rem;
   z-index: 1000; /* Ensure it appears above the overlay */
+  display: none;
 }
 /* Form Heading */
 .form-container h3 {
@@ -409,6 +410,7 @@ h1 a {
   font-size: 1rem;
   box-sizing: border-box;
   transition: border 0.2s;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .form-container input:focus,
@@ -423,12 +425,6 @@ h1 a {
   max-height: 200px;
 }
 
-/* Button Row */
-.form-buttons {
-  display: flex;
-  /* gap: 20rem; */
-}
-
 .form-container button {
   flex: 1;
   padding: 0.75rem;
@@ -437,6 +433,7 @@ h1 a {
   border: none;
   cursor: pointer;
   transition: background 0.1s;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .form-container button[type="submit"] {
