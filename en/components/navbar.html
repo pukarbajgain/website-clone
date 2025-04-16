@@ -1,97 +1,113 @@
-<div class="container">
-    <nav class="sidebar">
-        <div class="nav-item">
-            <button onclick="toggleMenu('menu1',this)">Embassy</button>
-            <div class="nav-links" id="menu1">
-                <li><a href="#">Ambassador</a></li>
-                <li><a href="#">Structure</a></li>
-                <li><a href="#">Contacts/Working Hours</a></li>
-                <li><a href="#">Photo Gallery</a></li>
-            </div>
-        </div>
-        
-        <hr>
-        
-        <div class="nav-item">
-            <button onclick="toggleMenu('menu2',this)">Armenia</button>
-            <div class="nav-links" id="menu2">
-                <li><a href="#">Overview</a></li> 
-                <li><a href="#">Governance</a></li>
-                <li><a href="#">Culture</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Doing business in Armenia</a></li>
+<nav class="sidebar" id="sidebar">
 
-            </div>
+        
+      
+    <div class="nav-item">
+        <button onclick="toggleMenu('menu1',this)" data-id="embassy">Embassy</button>
+        <div class="nav-links" id="menu1">
+            <ul>
+                <li data-link="/en/pages/ambassador.html">Ambassador</li>
+                <li data-link="/en/pages/structure.html">Structure</li>
+                <li data-link="/en/pages/contacts.html">Contacts/Working hours</li>
+                <li data-link="/en/pages/gallery.html">Photo Gallery</li>
+            </ul>
         </div>
-        <hr>
-        <div class="nav-item">
-            <button onclick="toggleMenu('menu3',this)">VISA for citizens of Nepal</button>
-            <div class="nav-links" id="menu3">
-               <li> <a href="#">Requirements</a></li>
-                <li><a href="#">Application</a></li>
-                <li><a href="#">Processing Time</a></li>
-                
-            </div>
+    </div>
+
+    <hr>
+
+    <div class="nav-item">
+        <button onclick="toggleMenu('menu2',this)" data-id="armenia">Armenia</button>
+        <div class="nav-links" id="menu2">
+            <ul>
+                <li data-link="/en/pages/overview.html">Overview</li>
+                <li data-link="/en/pages/governance.html">Governance</li>
+                <li data-link="/en/pages/culture.html">Culture</li>
+                <li data-link="/en/pages/history.html">History</li>
+                <li data-link="/en/pages/business.html">Doing business in Armenia</li>
+                <li data-link="https://enterprisearmenia.am/">Invest in Armenia </li>
+            </ul>
         </div>
-        <hr>
-        <div class="nav-item">
-            <button onclick="toggleMenu('menu4',this)">Bilateral Relations</button>
-            <div class="nav-links" id="menu4">
-                <li><a href="#">Trade</a></li>
-                <li> <a href="#">Politics</a></li>
-                <li><a href="#">Agreements</a></li>
-            </div>
+    </div>
+    <hr>
+    <div class="nav-item">
+        <button onclick="toggleMenu('menu3',this)" data-id="visa">Visa for Citizens of Nepal</button>
+        <div class="nav-links" id="menu3">
+            <ul>
+                <li data-link="/en/pages/procedures.html">Procedures</li>
+
+            </ul>
         </div>
-        <hr>
-        <div class="nav-item">
-            <button onclick="toggleMenu('menu5',this)">Consular Affairs</button>
-            <div class="nav-links" id="menu5">
-                <li><a href="#">Free Consular Services</a></li>
-                <li><a href="#">Visa</a></li>
-                <li><a href="#">Passport</a></li>
-                <li><a href="#">Consular registration</a></li>
-                <li><a href="#">Notary services</a></li>
-                <li><a href="#">Special residency Status</a></li>
-                <li><a href="#">Advice for travellers</a></li>
-                <li><a href="#">Crimial record certificate</a></li>
-                <li><a href="#">Consular fees</a></li>
-                <li><a href="#">FAQ</a></li>
-                
-                
-            </div>
+    </div>
+
+
+    <hr>
+    <div class="nav-item">
+        <button onclick="toggleMenu('menu4',this)" data-id="bilateral">Bilateral Relations</button>
+        <div class="nav-links" id="menu4">
+            <ul>
+                <li data-link="/en/pages/agreements.html">Agreements</li>
+            </ul>
         </div>
-        <hr>
-        <div class="nav-item">
-            <button onclick="toggleMenu('menu6',this)">News and Information</button>
-            <div class="nav-links" id="menu6">
-                <li><a href="#">News</a></li>
-                <li><a href="#">Useful Links</a></li>
-                <li><a href="#">Announcements</a></li>
-            </div>
+    </div>
+    <hr>
+    <div class="nav-item">
+        <button onclick="toggleMenu('menu5',this)" data-id="consular">Consular Affairs</button>
+        <div class="nav-links" id="menu5">
+            <ul>
+                <li data-link="/en/pages/consular_service.html">Free Consular Services</li>
+                <li data-link="https://www.mfa.am/en/">Visa</li>
+                <li data-link="/en/pages/passport.html">Passport</li>
+                <li>Consular registration</li>
+                <li>Notary services</li>
+                <li>Special residency Status</li>
+                <li>Advice for travellers</li>
+                <li>Crimial record certificate</li>
+                <li>Consular fees</li>
+                <li data-link="/en/pages/faq.html">FAQ</li>
+            </ul>
+
         </div>
-        <hr>
-        <div class="nav-item">
-            <button onclick="toggleMenu('menu7',this)">Armenian Community</button>
-            <div class="nav-links" id="menu7">
-                <li><a href="#">About Community</a></li>
-                <li><a href="#">Activities</a></li>
-                <li><a href="#">Hayastan All Armenian Fund</a></li>
-            </div>
+    </div>
+    <hr>
+    <div class="nav-item">
+        <button onclick="toggleMenu('menu6',this)" data-id="news">News and Information</button>
+        <div class="nav-links" id="menu6">
+            <ul>
+                <li data-link="/en/pages/news.html">News</li>
+                <li data-link="/en/pages/links.html">Useful Links</li>
+            </ul>
         </div>
-        <hr>
-        <div class="nav-item">
-            <button onclick="toggleMenu('menu8',this)">Study in Armenia</button>
-            <div class="nav-links" id="menu8" >
-                <li><a href="#">Universities</a></li>
-                <li><a href="#">Scholarships</a></li>
-                <li><a href="#">Programs</a></li>
-            </div>
+    </div>
+    <hr>
+    <div class="nav-item">
+        <button onclick="toggleMenu('menu7',this)" data-id="community">Armenian Community</button>
+        <div class="nav-links" id="menu7">
+            <ul>
+                <li data-link="/en/pages/community.html">About Community</li>
+                <li data-link="/en/pages/fund.html">Hayastan All Armenian Fund</li>
+            </ul>
         </div>
-        <div class="appointment" onclick="toggleForm()">BOOK AN APPOINTMENT</div>
-    </nav>
-    <div id = 'overlay' class = 'overlay'></div>
+    </div>
+    <hr>
+    <div class="nav-item">
+        <button onclick="toggleMenu('menu8',this)" data-id="study">Study in Armenia</button>
+        <div class="nav-links" id="menu8">
+            <ul>
+                <li data-link="/en/pages/university.html">Universities</li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+</nav>
+<div class="appointment" onclick="toggleForm()">BOOK AN APPOINTMENT   
+</div>
+
+
+    <div id='overlay' class='overlay'></div>
     <div id="appointmentForm" class="form-container">
-        <form id = "form_element" onsubmit="return validateForm(event)">
+        <form id="form_element" onsubmit="return validateForm(event)">
             <h3> Book an appointment </h3>
             <label for="name"> Name:</label>
             <input type="text" id="name" placeholder="Must be filled" required>
@@ -103,9 +119,8 @@
             <input type="date" id="date" required>
             <label for="message">Your Message:</label>
             <textarea id="message" rows="10" placeholder="Write your message here..."></textarea>
-            
+
             <button type="submit" onclick="toggleForm()">Submit</button>
             <button type="button" onclick="toggleForm()">Cancel</button>
         </form>
     </div>
-</div>
