@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             ? '../components/' + relativePath
             : 'en/components/' + relativePath;
 
-    
     }
 
     async function loadComponent(id, file) {
@@ -28,15 +27,51 @@ document.addEventListener('DOMContentLoaded', async () => {
    
     
 
-    
-
-
     setupNavigation();
+    
+    // function setupNavigation() {
+    //     const navItemBtns = document.querySelectorAll('.nav-item button');
+    //     const currentPage = window.location.pathname.split('/').pop();
+        
+    //     const activeNavBtn = sessionStorage.getItem('active-nav-btn');
+    //     if (currentPage !== '' && currentPage !== 'index.html') {
+    //         navItemBtns.forEach((navBtn) => {
+    //             const currentDataId = navBtn.dataset.id;
+    //             if (activeNavBtn === currentDataId && !navBtn.classList.contains('active')) {
+    //                 toggleMenu(navBtn.nextElementSibling.getAttribute('id'), navBtn);
+    //             }
+    //         });
+    //     }
+        
+    //     const navLinks = document.querySelectorAll('.nav-links li[data-link]');
+        
+    //     navLinks.forEach(link => {
+    //         const targetPath = link.dataset.link;
+    //         const targetPage = targetPath?.split('/').pop();
+            
+            
+    //         if (targetPage === currentPage) {
+    //             link.classList.add('active-link');
+    //         }
+            
+            
+    //         link.addEventListener('click', () => {
+    //             if (!targetPath) return;
+    //             const normalizedPath = targetPath.replace(/^.*?en\/pages\//, '/en/pages/');
+    //             if (targetPage === currentPage) {
+    //                 window.location.reload(); 
+    //             } else {
+    //                 window.location.href = normalizedPath; 
+    //             }
 
+
+    //         });
+    //     });
+    // }
     function setupNavigation() {
         const navItemBtns = document.querySelectorAll('.nav-item button');
         const currentPage = window.location.pathname.split('/').pop();
-
+    
         const activeNavBtn = sessionStorage.getItem('active-nav-btn');
         if (currentPage !== '' && currentPage !== 'index.html') {
             navItemBtns.forEach((navBtn) => {
@@ -46,28 +81,60 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }
             });
         }
-
+    
         const navLinks = document.querySelectorAll('.nav-links li[data-link]');
-
+    
         navLinks.forEach(link => {
             const targetPath = link.dataset.link;
             const targetPage = targetPath?.split('/').pop();
-
+    
 
             if (targetPage === currentPage) {
                 link.classList.add('active-link');
             }
-
+    
 
             link.addEventListener('click', () => {
+                const parentBtn = link.closest('.nav-item')?.querySelector('button');
+                if (parentBtn) {
+                    sessionStorage.setItem('active-nav-btn', parentBtn.dataset.id);
+                }
+    
                 if (!targetPath) return;
-                const normalizedPath = targetPath.replace(/^.*?en\/embassy\//, '/en/embassy/');
+    
+                const normalizedPath = targetPath.replace(/^.*?en\/pages\//, '/en/pages/');
                 if (targetPage === currentPage) {
                     window.location.reload(); 
                 } else {
-                    window.location.href = normalizedPath; 
+                    window.location.href = normalizedPath;
                 }
             });
         });
     }
+    
+    
+      const hamburger = document.getElementById("hamburger-btn");
+      const m_sidebar = document.getElementById("mobileSidebar");
+      const body = document.body;
+
+    
+      hamburger.addEventListener('click',()=>{
+        m_sidebar.classList.toggle('active');
+        hamburger.classList.toggle('active');
+        body.classList.toggle('no-scroll');
+      });
+      document.querySelectorAll('.rightsidebar a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          m_sidebar.classList.remove('active');
+        });
+      });
+      
+
+    
+
+    
+    
 });
+
+  
