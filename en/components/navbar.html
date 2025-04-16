@@ -57,11 +57,11 @@
                     <li data-link="/en/pages/consular_service.html">Free Consular Services</li>
                     <li data-link = "https://www.mfa.am/en/">Visa</li>
                     <li data-link="/en/pages/passport.html">Passport</li>
-                    <li>Consular registration</li>
-                    <li>Notary services</li>
-                    <li>Special residency Status</li>
-                    <li>Advice for travellers</li>
-                    <li>Crimial record certificate</li>
+                    <li data-link="/en/pages/registration.html">Consular registration</li>
+                    <li data-link="/en/pages/notary.html">Notary services</li>
+                    <li data-link = "/en/pages/residency.html">Special residency Status</li>
+                    <li data-link = "/en/pages/advice.html">Advice for travellers</li>
+                    <li data-link = "/en/pages/criminal_records.html">Crimial record certificate</li>
                     <li>Consular fees</li>
                     <li>FAQ</li>
                 </ul>
@@ -103,23 +103,23 @@
         </div>
         <div class="appointment" onclick="toggleForm()">BOOK AN APPOINTMENT</div>
     </nav>
-    <div id='overlay' class='overlay'></div>
-    <div id="appointmentForm" class="form-container">
+    <div id='overlay' class='overlay' style="display:none;"></div>
+    <div id="appointmentForm" class="form-container" style="display: none;">
         <form id="form_element" onsubmit="return validateForm(event)">
             <h3> Book an appointment </h3>
             <label for="name"> Name:</label>
-            <input type="text" id="name" placeholder="Must be filled" required>
+            <input type="text" id="name" placeholder="Must be filled" style="font-family: 'Times New Roman', Times, serif;" required>
             <label for="email"> Email:</label>
-            <input type="email" id="email" placeholder="Must be filled" required>
+            <input type="email" id="email" placeholder="Must be filled" style="font-family: 'Times New Roman', Times, serif;" required>
             <label for="phone"> Phone:</label>
-            <input type="tel" id="phone" placeholder="Must be filled" required>
+            <input type="tel" id="phone" placeholder="Must be filled" style="font-family: 'Times New Roman', Times, serif;" required>
             <label for="date">Preferred Date:</label>
-            <input type="date" id="date" required>
+            <input type="date" id="date" style="font-family: 'Times New Roman', Times, serif;" required>
             <label for="message">Your Message:</label>
-            <textarea id="message" rows="10" placeholder="Write your message here..."></textarea>
+            <textarea id="message" rows="10" placeholder="Write your message here..." style="font-family: 'Times New Roman', Times, serif;"></textarea>
 
-            <button type="submit" onclick="toggleForm()">Submit</button>
-            <button type="button" onclick="toggleForm()">Cancel</button>
+            <button type="submit" onclick="toggleForm()" style="font-family: 'Times New Roman', Times, serif;">Submit</button>
+            <button type="button" onclick="toggleForm()" style="font-family: 'Times New Roman', Times, serif;">Cancel</button>
         </form>
     </div>
 
