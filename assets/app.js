@@ -20,29 +20,45 @@ function toggleMenu(id, button) {
         button.classList.add('active');
         sessionStorage.setItem('active-nav-btn', button.dataset.id)
     }
-  }
-
+}
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById("appointmentForm").style.display = "none";
+  document.getElementById("overlay").style.display = "none";
+});
 function toggleForm() {
   const form = document.getElementById("appointmentForm");
-  const header = document.querySelector(".header");
-  const navbar = document.querySelector(".sidebar");
-  const footer = document.querySelector(".footer");
+  const overlay = document.getElementById("overlay");
+  // const header = document.querySelector(".header");
+  // const navbar = document.querySelector(".sidebar");
+  // const footer = document.querySelector(".footer");
 
   if (form.style.display === "none" || form.style.display === "") {
     form.style.display = "block";
+    overlay.style.display = "block";
 
-    header.classList.add("blur-header");
-    navbar.classList.add("blur-sidebar");
-    footer.classList.add("blur-footer");
+   
     document.body.style.overflow = "hidden";
   } else {
     form.style.display = "none";
-    header.classList.remove("blur-header");
-    navbar.classList.remove("blur-sidebar");
-    footer.classList.remove("blur-footer");
+    overlay.style.display = "none";
+    // if (overlay) overlay.style.display = 'none';
+    // if (form) form.style.display = 'none';
     document.body.style.overflow = "auto";
   }
 }
+document.addEventListener('keydown', function(event) {
+  const form = document.getElementById("appointmentForm");
+  const overlay = document.getElementById("overlay");
+  if (
+    (event.key === "Escape" || event.key === "Esc") &&
+    form.style.display === "block"
+  ) {
+    form.style.display = "none";
+    overlay.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+}
+);
 function validateForm(event) {
   event.preventDefault();
 
