@@ -57,6 +57,14 @@ document.addEventListener('DOMContentLoaded', async () => {
             
     //         link.addEventListener('click', () => {
     //             if (!targetPath) return;
+
+    //             const parentButton = link.closest('.nav-item')?.querySelector('button');
+    //                 if (parentButton) {
+    //                     const navBtnId = parentButton.dataset.id;
+    //                     sessionStorage.setItem('active-nav-btn', navBtnId);
+    //                 }
+
+
     //             const normalizedPath = targetPath.replace(/^.*?en\/pages\//, '/en/pages/');
     //             if (targetPage === currentPage) {
     //                 window.location.reload(); 
@@ -70,47 +78,59 @@ document.addEventListener('DOMContentLoaded', async () => {
     // }
     function setupNavigation() {
         const navItemBtns = document.querySelectorAll('.nav-item button');
+        const navLinks = document.querySelectorAll('.nav-links li[data-link]');
         const currentPage = window.location.pathname.split('/').pop();
     
-        const activeNavBtn = sessionStorage.getItem('active-nav-btn');
-        if (currentPage !== '' && currentPage !== 'index.html') {
-            navItemBtns.forEach((navBtn) => {
-                const currentDataId = navBtn.dataset.id;
-                if (activeNavBtn === currentDataId && !navBtn.classList.contains('active')) {
-                    toggleMenu(navBtn.nextElementSibling.getAttribute('id'), navBtn);
-                }
-            });
-        }
+        // Restore active menu button from sessionStorage
+        const activeNavBtnId = sessionStorage.getItem('active-nav-btn');
     
-        const navLinks = document.querySelectorAll('.nav-links li[data-link]');
+        navItemBtns.forEach(button => {
+            const btnId = button.dataset.id;
+            const menu = button.nextElementSibling;
+            if (btnId === activeNavBtnId) {
+                // Open the correct menu and mark button active
+                menu.style.display = 'flex';
+                button.classList.add('active');
+            } else {
+                // Make sure others are closed
+                menu.style.display = 'none';
+                button.classList.remove('active');
+            }
+        });
     
+        // Highlight the correct submenu link
         navLinks.forEach(link => {
             const targetPath = link.dataset.link;
             const targetPage = targetPath?.split('/').pop();
     
-
             if (targetPage === currentPage) {
-                link.classList.add('active-link');
+                link.classList.add('active-link'); // optional class for style
             }
     
-
             link.addEventListener('click', () => {
-                const parentBtn = link.closest('.nav-item')?.querySelector('button');
-                if (parentBtn) {
-                    sessionStorage.setItem('active-nav-btn', parentBtn.dataset.id);
-                }
-    
                 if (!targetPath) return;
     
+                // Save the button ID related to this submenu link
+                const parentButton = link.closest('.nav-item')?.querySelector('button');
+                if (parentButton) {
+                    sessionStorage.setItem('active-nav-btn', parentButton.dataset.id);
+                }
+    
+                // Navigate
                 const normalizedPath = targetPath.replace(/^.*?en\/pages\//, '/en/pages/');
                 if (targetPage === currentPage) {
-                    window.location.reload(); 
+                    window.location.reload();
                 } else {
                     window.location.href = normalizedPath;
                 }
             });
         });
     }
+    
+    
+    
+
+
     
     
       const hamburger = document.getElementById("hamburger-btn");

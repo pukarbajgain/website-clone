@@ -20,7 +20,7 @@ function toggleMenu(id, button) {
         button.classList.add('active');
         sessionStorage.setItem('active-nav-btn', button.dataset.id)
     }
-}
+  }
 
 function toggleForm() {
   const form = document.getElementById("appointmentForm");

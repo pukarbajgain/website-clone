@@ -126,118 +126,6 @@ h1 a {
   transform: scale(1.1);
 }
 
-
-
-
-
-/* .header {
-  position: relative;
-  background-image: url("./img/banner.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 38vh;
-  align-items: flex-end;
-  padding: 20px;
-}
-
-.blur-header {
-  filter: blur(0.1rem);
-  transition: filter 0.1s ease-in-out;
-}
-
-.header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.35);
-}
-
-.header-content {
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-
-.left-section {
-  position: absolute;
-  bottom: 4px;
-  left: 30px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.right-section {
-  display: flex;
-  align-items: center;
-}
-
-.language-switch {
-  position: absolute;
-  display: flex;
-  top: 0.2px;
-  right: 40px;
-}
-
-.logo {
-  background: none;
-  width: 105px;
-  height: auto;
-}
-
-h1 a{
-
-  color: white;
-  font-size: 30px;
-  text-decoration: none;
-
-}
-
-.language-switch {
-  display: flex;
-}
-
-.lang {
-  padding-left: 10px;
-  text-decoration: none;
-  color: white;
-}
-
-.lang:hover {
-  text-decoration: underline;
-}
-
-.social-icons {
-  display: flex;
-  gap: 15px;
-  bottom: 25px;
-  right: 30px;
-  position: absolute;
-}
-
-.icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #3b3f5f;
-  color: white;
-  font-size: 24px;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-}
-
-.icon:hover {
-  transform: scale(1.1);
-} */
- 
-
 .container {
   display: flex;
   /* grid-template-columns: 20% 80%; */
@@ -249,7 +137,7 @@ h1 a{
 
  #sidebar {
  
-  width: 20rem;
+  width: 25rem;
   background-color: rgb(59, 63, 95);
   color: white;
   display: flex;
@@ -323,6 +211,7 @@ h1 a{
   content: "•";
   color: #0ba5cc;
   font-size: 1rem;
+
 }
 
 .nav-links li::marker {
