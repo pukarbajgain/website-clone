@@ -1,26 +1,26 @@
+
 function toggleMenu(id, button) {
   const menu = document.getElementById(id);
   const allMenus = document.querySelectorAll(".nav-links");
   const allButtons = document.querySelectorAll(".nav-item button");
 
-  allMenus.forEach((item) => {
-    if (item.id !== id) item.style.display = "none";
-  });
-  allButtons.forEach((btn) => {
-    if (btn !== button) btn.classList.remove("active");
-  });
+  const isAlreadyOpen = menu.style.display === 'flex';
+
+  allMenus.forEach(item => item.style.display = "none");
+  allButtons.forEach(btn => btn.classList.remove("active"));
 
 
-    if (menu.style.display === 'flex') {
-        menu.style.display = 'none';
-        button.classList.remove('active');
-        sessionStorage.removeItem('active-nav-btn');
-    } else {
-        menu.style.display = 'flex';
-        button.classList.add('active');
-        sessionStorage.setItem('active-nav-btn', button.dataset.id)
-    }
+
+  if (!isAlreadyOpen) {
+
+      menu.style.display = 'flex';
+      button.classList.add('active');
+      sessionStorage.setItem('active-nav-btn', button.dataset.id);
+  } else {
+      sessionStorage.removeItem('active-nav-btn');
+  }
 }
+
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById("appointmentForm").style.display = "none";
   document.getElementById("overlay").style.display = "none";
