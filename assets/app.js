@@ -72,16 +72,19 @@ function validateForm(event) {
 
   if (!nameRegex.test(name)) {
     alert("Please enter a valid name. Only letters and spaces are allowed.");
+    toggleForm();
     return false;
   }
 
   if (!emailRegex.test(email)) {
     alert("Please enter a valid email address.");
+    toggleForm();
     return false;
   }
 
   if (!phoneRegex.test(phone)) {
     alert("Please enter a valid phone number (7-14 digits, optional +).");
+    toggleForm();
     return false;
   }
 
